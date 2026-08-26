@@ -14,6 +14,187 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <!-- ========== META PIXEL CODE ========== -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1057302533673470');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1057302533673470&ev=PageView&noscript=1"/></noscript>
+    <!-- ========== END META PIXEL CODE ========== -->
+
+    <!-- ========== POPUP STYLES ========== -->
+    <style>
+    .popup-overlay {
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.7);
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
+    }
+    .popup-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    .popup-box {
+        background: #fff;
+        border-radius: 20px;
+        width: 90%;
+        max-width: 480px;
+        padding: 0;
+        position: relative;
+        transform: scale(0.8) translateY(30px);
+        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    .popup-overlay.active .popup-box {
+        transform: scale(1) translateY(0);
+    }
+    .popup-header {
+        background: linear-gradient(135deg, #6C5CE7 0%, #00CEC9 100%);
+        padding: 28px 30px;
+        text-align: center;
+    }
+    .popup-header h2 {
+        color: #fff;
+        font-family: 'Outfit', sans-serif;
+        font-size: 22px;
+        font-weight: 800;
+        margin-bottom: 6px;
+    }
+    .popup-header p {
+        color: rgba(255,255,255,0.85);
+        font-size: 14px;
+    }
+    .popup-body {
+        padding: 28px 30px 30px;
+    }
+    .popup-form .p-form-group {
+        margin-bottom: 16px;
+    }
+    .popup-form .p-form-group label {
+        display: block;
+        font-size: 13px;
+        font-weight: 600;
+        color: #2C3E50;
+        margin-bottom: 6px;
+    }
+    .popup-form .p-form-group input,
+    .popup-form .p-form-group select {
+        width: 100%;
+        padding: 12px 16px;
+        border: 1.5px solid #E0E0E0;
+        border-radius: 10px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        color: #333;
+        transition: all 0.3s ease;
+        background: #FAFAFA;
+    }
+    .popup-form .p-form-group input:focus,
+    .popup-form .p-form-group select:focus {
+        outline: none;
+        border-color: #6C5CE7;
+        box-shadow: 0 0 0 3px rgba(108,92,231,0.1);
+        background: #fff;
+    }
+    .popup-form .popup-submit {
+        width: 100%;
+        padding: 14px;
+        background: linear-gradient(135deg, #6C5CE7 0%, #00CEC9 100%);
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+    .popup-form .popup-submit:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(108,92,231,0.4);
+    }
+    .popup-close {
+        position: absolute;
+        top: 14px;
+        right: 16px;
+        width: 32px;
+        height: 32px;
+        background: rgba(255,255,255,0.2);
+        border: none;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 18px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        z-index: 1;
+    }
+    .popup-close:hover {
+        background: rgba(255,255,255,0.4);
+        transform: rotate(90deg);
+    }
+    .popup-badge {
+        display: inline-block;
+        background: rgba(255,255,255,0.2);
+        padding: 4px 14px;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 10px;
+        letter-spacing: 0.5px;
+    }
+    .popup-trust {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 14px;
+        padding-top: 14px;
+        border-top: 1px solid #f0f0f0;
+    }
+    .popup-trust span {
+        font-size: 11px;
+        color: #888;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+    .popup-trust i {
+        color: #00CEC9;
+        font-size: 12px;
+    }
+    @media(max-width:500px) {
+        .popup-box { width: 95%; }
+        .popup-header { padding: 22px 20px; }
+        .popup-header h2 { font-size: 19px; }
+        .popup-body { padding: 22px 20px 24px; }
+    }
+    </style>
 </head>
 <body>
 
@@ -710,6 +891,145 @@
     <a href="#home" class="back-to-top" id="backToTop">
         <i class="fas fa-chevron-up"></i>
     </a>
+
+    <!-- ========== LEAD POPUP ========== -->
+    <div class="popup-overlay" id="leadPopup">
+        <div class="popup-box">
+            <button class="popup-close" onclick="closePopup()">&times;</button>
+            <div class="popup-header">
+                <span class="popup-badge">🔥 Limited Time Offer</span>
+                <h2>Get Meta Agency Ad Account</h2>
+                <p>Verified & Ready-to-Use Ad Accounts at Best Prices</p>
+            </div>
+            <div class="popup-body">
+                <form class="popup-form" id="popupForm" onsubmit="handlePopupSubmit(event)">
+                    <div class="p-form-group">
+                        <label for="popup-name">Your Name *</label>
+                        <input type="text" id="popup-name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="p-form-group">
+                        <label for="popup-phone">Phone Number *</label>
+                        <input type="tel" id="popup-phone" name="phone" placeholder="+91 XXXXX XXXXX" required>
+                    </div>
+                    <div class="p-form-group">
+                        <label for="popup-business">Business / Agency Name</label>
+                        <input type="text" id="popup-business" name="business" placeholder="Your business name">
+                    </div>
+                    <div class="p-form-group">
+                        <label for="popup-budget">Monthly Ad Spend Budget</label>
+                        <select id="popup-budget" name="budget">
+                            <option value="">Select your budget</option>
+                            <option value="under-50k">Under ₹50,000</option>
+                            <option value="50k-1l">₹50,000 - ₹1,00,000</option>
+                            <option value="1l-5l">₹1,00,000 - ₹5,00,000</option>
+                            <option value="5l-10l">₹5,00,000 - ₹10,00,000</option>
+                            <option value="above-10l">Above ₹10,00,000</option>
+                        </select>
+                    </div>
+                    <div class="p-form-group">
+                        <label for="popup-need">What do you need? *</label>
+                        <select id="popup-need" name="need" required>
+                            <option value="">Select your requirement</option>
+                            <option value="meta-agency-ad-acc">Meta Agency Ad Account</option>
+                            <option value="meta-bm">Meta Business Manager</option>
+                            <option value="google-agency-acc">Google Agency Ad Account</option>
+                            <option value="both-meta-google">Both Meta & Google Accounts</option>
+                            <option value="other">Other Requirement</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="popup-submit">
+                        Get Started on WhatsApp <i class="fab fa-whatsapp"></i>
+                    </button>
+                    <div class="popup-trust">
+                        <span><i class="fas fa-check-circle"></i> Verified Accounts</span>
+                        <span><i class="fas fa-check-circle"></i> Instant Delivery</span>
+                        <span><i class="fas fa-check-circle"></i> 24/7 Support</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== POPUP SCRIPT ========== -->
+    <script>
+    // Show popup after 1 second
+    setTimeout(function() {
+        var popup = document.getElementById('leadPopup');
+        if (popup && !sessionStorage.getItem('popupClosed')) {
+            popup.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            // Fire Meta Pixel Lead event for popup view
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'ViewContent', { content_name: 'Lead Popup Opened' });
+            }
+        }
+    }, 1000);
+
+    // Close popup
+    function closePopup() {
+        var popup = document.getElementById('leadPopup');
+        popup.classList.remove('active');
+        document.body.style.overflow = '';
+        sessionStorage.setItem('popupClosed', 'true');
+    }
+
+    // Close on overlay click
+    document.getElementById('leadPopup').addEventListener('click', function(e) {
+        if (e.target === this) closePopup();
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closePopup();
+    });
+
+    // Handle popup form submission
+    function handlePopupSubmit(event) {
+        event.preventDefault();
+        var name = document.getElementById('popup-name').value.trim();
+        var phone = document.getElementById('popup-phone').value.trim();
+        var business = document.getElementById('popup-business').value.trim();
+        var budget = document.getElementById('popup-budget').value;
+        var need = document.getElementById('popup-need').value;
+
+        // Build WhatsApp message
+        var msg = "Hi Admiz Agency! 👋\n\n";
+        msg += "I'm interested in your services.\n\n";
+        msg += "📋 *Lead Details:*\n";
+        msg += "👤 Name: " + name + "\n";
+        msg += "📱 Phone: " + phone + "\n";
+        if (business) msg += "🏢 Business: " + business + "\n";
+        if (budget) msg += "💰 Budget: " + budget + "\n";
+        msg += "🎯 Requirement: " + need + "\n\n";
+        msg += "Please share more details about Meta Agency Ad Account.";
+
+        // Fire Meta Pixel Lead event
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'Lead', {
+                content_name: need,
+                content_category: 'Meta Agency Ad Account',
+                value: budget || 'not specified',
+                currency: 'INR'
+            });
+        }
+
+        // Redirect to WhatsApp
+        var waURL = "https://wa.me/918377950798?text=" + encodeURIComponent(msg);
+        
+        // Show success
+        var btn = document.querySelector('.popup-submit');
+        btn.innerHTML = '<i class="fas fa-check"></i> Redirecting to WhatsApp...';
+        btn.style.background = '#25D366';
+        
+        setTimeout(function() {
+            window.open(waURL, '_blank');
+            closePopup();
+            btn.innerHTML = 'Get Started on WhatsApp <i class="fab fa-whatsapp"></i>';
+            btn.style.background = '';
+            document.getElementById('popupForm').reset();
+        }, 800);
+    }
+    </script>
 
     <script src="script.js"></script>
 </body>
