@@ -32,168 +32,45 @@
     src="https://www.facebook.com/tr?id=1057302533673470&ev=PageView&noscript=1"/></noscript>
     <!-- ========== END META PIXEL CODE ========== -->
 
-    <!-- ========== POPUP STYLES ========== -->
+    <!-- ========== QUIZ STYLES (injected via JS for bot protection) ========== -->
     <style>
-    .popup-overlay {
-        position: fixed;
-        top: 0; left: 0; width: 100%; height: 100%;
-        background: rgba(0,0,0,0.7);
-        z-index: 10000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        backdrop-filter: blur(5px);
-    }
-    .popup-overlay.active {
-        opacity: 1;
-        visibility: visible;
-    }
-    .popup-box {
-        background: #fff;
-        border-radius: 20px;
-        width: 90%;
-        max-width: 480px;
-        padding: 0;
-        position: relative;
-        transform: scale(0.8) translateY(30px);
-        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-        overflow: hidden;
-        box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-    }
-    .popup-overlay.active .popup-box {
-        transform: scale(1) translateY(0);
-    }
-    .popup-header {
-        background: linear-gradient(135deg, #6C5CE7 0%, #00CEC9 100%);
-        padding: 28px 30px;
-        text-align: center;
-    }
-    .popup-header h2 {
-        color: #fff;
-        font-family: 'Outfit', sans-serif;
-        font-size: 22px;
-        font-weight: 800;
-        margin-bottom: 6px;
-    }
-    .popup-header p {
-        color: rgba(255,255,255,0.85);
-        font-size: 14px;
-    }
-    .popup-body {
-        padding: 28px 30px 30px;
-    }
-    .popup-form .p-form-group {
-        margin-bottom: 16px;
-    }
-    .popup-form .p-form-group label {
-        display: block;
-        font-size: 13px;
-        font-weight: 600;
-        color: #2C3E50;
-        margin-bottom: 6px;
-    }
-    .popup-form .p-form-group input,
-    .popup-form .p-form-group select {
-        width: 100%;
-        padding: 12px 16px;
-        border: 1.5px solid #E0E0E0;
-        border-radius: 10px;
-        font-family: 'Poppins', sans-serif;
-        font-size: 14px;
-        color: #333;
-        transition: all 0.3s ease;
-        background: #FAFAFA;
-    }
-    .popup-form .p-form-group input:focus,
-    .popup-form .p-form-group select:focus {
-        outline: none;
-        border-color: #6C5CE7;
-        box-shadow: 0 0 0 3px rgba(108,92,231,0.1);
-        background: #fff;
-    }
-    .popup-form .popup-submit {
-        width: 100%;
-        padding: 14px;
-        background: linear-gradient(135deg, #6C5CE7 0%, #00CEC9 100%);
-        color: #fff;
-        border: none;
-        border-radius: 12px;
-        font-family: 'Poppins', sans-serif;
-        font-size: 16px;
-        font-weight: 700;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        margin-top: 4px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-    }
-    .popup-form .popup-submit:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(108,92,231,0.4);
-    }
-    .popup-close {
-        position: absolute;
-        top: 14px;
-        right: 16px;
-        width: 32px;
-        height: 32px;
-        background: rgba(255,255,255,0.2);
-        border: none;
-        border-radius: 50%;
-        color: #fff;
-        font-size: 18px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s ease;
-        z-index: 1;
-    }
-    .popup-close:hover {
-        background: rgba(255,255,255,0.4);
-        transform: rotate(90deg);
-    }
-    .popup-badge {
-        display: inline-block;
-        background: rgba(255,255,255,0.2);
-        padding: 4px 14px;
-        border-radius: 50px;
-        font-size: 12px;
-        font-weight: 600;
-        color: #fff;
-        margin-bottom: 10px;
-        letter-spacing: 0.5px;
-    }
-    .popup-trust {
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-        margin-top: 14px;
-        padding-top: 14px;
-        border-top: 1px solid #f0f0f0;
-    }
-    .popup-trust span {
-        font-size: 11px;
-        color: #888;
-        display: flex;
-        align-items: center;
-        gap: 4px;
-    }
-    .popup-trust i {
-        color: #00CEC9;
-        font-size: 12px;
-    }
-    @media(max-width:500px) {
-        .popup-box { width: 95%; }
-        .popup-header { padding: 22px 20px; }
-        .popup-header h2 { font-size: 19px; }
-        .popup-body { padding: 22px 20px 24px; }
-    }
+    ._qo{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.75);z-index:10000;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all .3s ease;backdrop-filter:blur(6px)}
+    ._qo._av{opacity:1;visibility:visible}
+    ._qb{background:#fff;border-radius:22px;width:92%;max-width:460px;position:relative;transform:scale(.85) translateY(25px);transition:all .4s cubic-bezier(.34,1.56,.64,1);overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+    ._qo._av ._qb{transform:scale(1) translateY(0)}
+    ._qh{background:linear-gradient(135deg,#6C5CE7,#00CEC9);padding:24px 28px;text-align:center}
+    ._qh h2{color:#fff;font-family:'Outfit',sans-serif;font-size:20px;font-weight:800;margin:0 0 4px}
+    ._qh p{color:rgba(255,255,255,.8);font-size:13px;margin:0}
+    ._qx{position:absolute;top:12px;right:14px;width:30px;height:30px;background:rgba(255,255,255,.2);border:none;border-radius:50%;color:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s;z-index:1}
+    ._qx:hover{background:rgba(255,255,255,.4);transform:rotate(90deg)}
+    ._qprog{display:flex;gap:4px;padding:0 28px;margin-top:-1px;background:#fff;padding-top:16px}
+    ._qprog span{flex:1;height:4px;border-radius:4px;background:#E8E8E8;transition:all .4s ease}
+    ._qprog span._done{background:linear-gradient(135deg,#6C5CE7,#00CEC9)}
+    ._qbd{padding:24px 28px 28px;min-height:240px;display:flex;flex-direction:column}
+    ._qq{font-family:'Outfit',sans-serif;font-size:18px;font-weight:700;color:#1a1a2e;margin-bottom:6px}
+    ._qsub{font-size:13px;color:#888;margin-bottom:18px}
+    ._opts{display:flex;flex-direction:column;gap:10px;flex:1}
+    ._opt{display:flex;align-items:center;gap:12px;padding:14px 18px;border:2px solid #EAEAEA;border-radius:14px;cursor:pointer;transition:all .25s ease;background:#FAFAFA;font-size:15px;font-weight:500;color:#333}
+    ._opt:hover{border-color:#A29BFE;background:#F5F3FF;transform:translateX(4px)}
+    ._opt._sel{border-color:#6C5CE7;background:linear-gradient(135deg,rgba(108,92,231,.08),rgba(0,206,201,.08));color:#6C5CE7;font-weight:600}
+    ._opt ._ic{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;background:rgba(108,92,231,.1);flex-shrink:0}
+    ._opt._sel ._ic{background:linear-gradient(135deg,#6C5CE7,#00CEC9);color:#fff!important}
+    ._opt ._ic span{line-height:1}
+    ._qnav{display:flex;gap:10px;margin-top:18px}
+    ._qnav button{flex:1;padding:13px;border:none;border-radius:12px;font-family:'Poppins',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all .3s;display:flex;align-items:center;justify-content:center;gap:8px}
+    ._qnav ._nxt{background:linear-gradient(135deg,#6C5CE7,#00CEC9);color:#fff;box-shadow:0 4px 15px rgba(108,92,231,.3)}
+    ._qnav ._nxt:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(108,92,231,.4)}
+    ._qnav ._nxt:disabled{opacity:.4;cursor:not-allowed;transform:none;box-shadow:none}
+    ._qnav ._bck{background:#F0F0F0;color:#666}
+    ._qnav ._bck:hover{background:#E0E0E0}
+    ._qfin{text-align:center;padding:10px 0}
+    ._qfin ._chk{width:70px;height:70px;border-radius:50%;background:linear-gradient(135deg,#6C5CE7,#00CEC9);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:32px;color:#fff;animation:_pop .5s ease}
+    ._qfin h3{font-family:'Outfit',sans-serif;font-size:22px;font-weight:800;color:#1a1a2e;margin-bottom:8px}
+    ._qfin p{font-size:14px;color:#666;margin-bottom:20px}
+    ._qfin ._wabtn{display:inline-flex;align-items:center;gap:10px;padding:15px 36px;background:#25D366;color:#fff;border:none;border-radius:14px;font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;cursor:pointer;transition:all .3s;box-shadow:0 4px 15px rgba(37,211,102,.35)}
+    ._qfin ._wabtn:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(37,211,102,.45)}
+    @keyframes _pop{0%{transform:scale(0)}50%{transform:scale(1.2)}100%{transform:scale(1)}}
+    @media(max-width:500px){._qb{width:96%}._qh{padding:20px}._qh h2{font-size:18px}._qbd{padding:20px 20px 24px}._qq{font-size:16px}._opt{padding:12px 14px;font-size:14px}}
     </style>
 </head>
 <body>
@@ -892,145 +769,247 @@
         <i class="fas fa-chevron-up"></i>
     </a>
 
-    <!-- ========== LEAD POPUP ========== -->
-    <div class="popup-overlay" id="leadPopup">
-        <div class="popup-box">
-            <button class="popup-close" onclick="closePopup()">&times;</button>
-            <div class="popup-header">
-                <span class="popup-badge">🔥 Limited Time Offer</span>
-                <h2>Get Meta Agency Ad Account</h2>
-                <p>Verified & Ready-to-Use Ad Accounts at Best Prices</p>
-            </div>
-            <div class="popup-body">
-                <form class="popup-form" id="popupForm" onsubmit="handlePopupSubmit(event)">
-                    <div class="p-form-group">
-                        <label for="popup-name">Your Name *</label>
-                        <input type="text" id="popup-name" name="name" placeholder="Enter your full name" required>
-                    </div>
-                    <div class="p-form-group">
-                        <label for="popup-phone">Phone Number *</label>
-                        <input type="tel" id="popup-phone" name="phone" placeholder="+91 XXXXX XXXXX" required>
-                    </div>
-                    <div class="p-form-group">
-                        <label for="popup-business">Business / Agency Name</label>
-                        <input type="text" id="popup-business" name="business" placeholder="Your business name">
-                    </div>
-                    <div class="p-form-group">
-                        <label for="popup-budget">Monthly Ad Spend Budget</label>
-                        <select id="popup-budget" name="budget">
-                            <option value="">Select your budget</option>
-                            <option value="under-50k">Under ₹50,000</option>
-                            <option value="50k-1l">₹50,000 - ₹1,00,000</option>
-                            <option value="1l-5l">₹1,00,000 - ₹5,00,000</option>
-                            <option value="5l-10l">₹5,00,000 - ₹10,00,000</option>
-                            <option value="above-10l">Above ₹10,00,000</option>
-                        </select>
-                    </div>
-                    <div class="p-form-group">
-                        <label for="popup-need">What do you need? *</label>
-                        <select id="popup-need" name="need" required>
-                            <option value="">Select your requirement</option>
-                            <option value="meta-agency-ad-acc">Meta Agency Ad Account</option>
-                            <option value="meta-bm">Meta Business Manager</option>
-                            <option value="google-agency-acc">Google Agency Ad Account</option>
-                            <option value="both-meta-google">Both Meta & Google Accounts</option>
-                            <option value="other">Other Requirement</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="popup-submit">
-                        Get Started on WhatsApp <i class="fab fa-whatsapp"></i>
-                    </button>
-                    <div class="popup-trust">
-                        <span><i class="fas fa-check-circle"></i> Verified Accounts</span>
-                        <span><i class="fas fa-check-circle"></i> Instant Delivery</span>
-                        <span><i class="fas fa-check-circle"></i> 24/7 Support</span>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+    <!-- Quiz container injected by JS - nothing here for bots to crawl -->
+    <div id="_qz"></div>
 
-    <!-- ========== POPUP SCRIPT ========== -->
+    <!-- ========== QUIZ ENGINE (Bot-Protected) ========== -->
     <script>
-    // Show popup after 1 second
-    setTimeout(function() {
-        var popup = document.getElementById('leadPopup');
-        if (popup && !sessionStorage.getItem('popupClosed')) {
-            popup.classList.add('active');
-            document.body.style.overflow = 'hidden';
-            // Fire Meta Pixel Lead event for popup view
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'ViewContent', { content_name: 'Lead Popup Opened' });
+    (function(){
+        // Bot detection - don't show to crawlers/bots
+        var _ua = navigator.userAgent || '';
+        var _bots = /bot|crawl|spider|slurp|facebook|facebot|wget|curl|python|java|phantom|headless|lighthouse|preview|fetcher|scraper/i;
+        if(_bots.test(_ua)) return;
+        if(!window.requestAnimationFrame) return;
+        if(navigator.webdriver) return;
+
+        // Quiz data - all questions with multi-choice options
+        var _steps = [
+            {
+                q: "Kis type ki ads chalani hai?",
+                sub: "Apna ad type select karein",
+                opts: [
+                    {ic:"⚪", txt:"White Hat Ads", val:"White Hat"},
+                    {ic:"🔘", txt:"Grey Hat Ads", val:"Grey Hat"},
+                    {ic:"⚫", txt:"Black Hat Ads", val:"Black Hat"},
+                    {ic:"🔄", txt:"Dono (Grey + Black)", val:"Grey + Black Hat"}
+                ]
+            },
+            {
+                q: "Konsa platform chahiye?",
+                sub: "Jis platform pe ad chalana hai",
+                opts: [
+                    {ic:"📘", txt:"Meta (Facebook / Instagram)", val:"Meta"},
+                    {ic:"🔍", txt:"Google Ads", val:"Google"},
+                    {ic:"📱", txt:"TikTok Ads", val:"TikTok"},
+                    {ic:"🌐", txt:"Multiple Platforms", val:"Multiple Platforms"}
+                ]
+            },
+            {
+                q: "Account type kya chahiye?",
+                sub: "Apni requirement select karein",
+                opts: [
+                    {ic:"🏢", txt:"Agency Ad Account", val:"Agency Ad Account"},
+                    {ic:"👤", txt:"Personal Ad Account", val:"Personal Ad Account"},
+                    {ic:"📊", txt:"Business Manager (BM)", val:"Business Manager"},
+                    {ic:"🔑", txt:"Verified BM + Ad Account", val:"Verified BM + Ad Account"}
+                ]
+            },
+            {
+                q: "Monthly ad spend budget kitna hai?",
+                sub: "Approximate budget batayein",
+                opts: [
+                    {ic:"💰", txt:"Under ₹50,000", val:"Under 50K"},
+                    {ic:"💵", txt:"₹50,000 - ₹2,00,000", val:"50K - 2L"},
+                    {ic:"💎", txt:"₹2,00,000 - ₹10,00,000", val:"2L - 10L"},
+                    {ic:"🏆", txt:"₹10,00,000+", val:"10L+"}
+                ]
+            },
+            {
+                q: "Kis niche me ads chalani hai?",
+                sub: "Apni industry select karein",
+                opts: [
+                    {ic:"🛒", txt:"E-Commerce / Dropshipping", val:"E-Commerce"},
+                    {ic:"🏠", txt:"Real Estate", val:"Real Estate"},
+                    {ic:"💊", txt:"Health / Nutra / Crypto", val:"Health/Nutra/Crypto"},
+                    {ic:"📚", txt:"Education / Finance / Other", val:"Education/Finance/Other"}
+                ]
+            },
+            {
+                q: "Kitne accounts chahiye?",
+                sub: "Quantity select karein",
+                opts: [
+                    {ic:"1️⃣", txt:"1 Account", val:"1 Account"},
+                    {ic:"🔢", txt:"2-5 Accounts", val:"2-5 Accounts"},
+                    {ic:"📦", txt:"5-10 Accounts (Bulk)", val:"5-10 Accounts"},
+                    {ic:"🏭", txt:"10+ Accounts (Wholesale)", val:"10+ Accounts"}
+                ]
+            }
+        ];
+
+        var _ans = {};
+        var _cur = 0;
+        var _tot = _steps.length;
+
+        // Build popup DOM dynamically
+        function _build(){
+            var ov = document.createElement('div');
+            ov.className = '_qo';
+            ov.id = '_qov';
+            ov.innerHTML = '<div class="_qb"><button class="_qx" id="_qcl">\u00d7</button><div class="_qh"><h2>🚀 Ad Account Finder</h2><p>Answer a few quick questions to get started</p></div><div class="_qprog" id="_qpr"></div><div class="_qbd" id="_qbdy"></div></div>';
+            document.getElementById('_qz').appendChild(ov);
+
+            // Progress bars
+            var pr = document.getElementById('_qpr');
+            for(var i=0;i<_tot;i++){
+                var s = document.createElement('span');
+                pr.appendChild(s);
+            }
+
+            // Close handlers
+            document.getElementById('_qcl').onclick = _close;
+            ov.addEventListener('click', function(e){if(e.target===ov)_close()});
+            document.addEventListener('keydown', function(e){if(e.key==='Escape')_close()});
+
+            _render();
+        }
+
+        function _render(){
+            var bdy = document.getElementById('_qbdy');
+            var step = _steps[_cur];
+
+            // Update progress
+            var bars = document.getElementById('_qpr').children;
+            for(var i=0;i<_tot;i++){
+                bars[i].className = i<=_cur ? '_done' : '';
+            }
+
+            var h = '<div class="_qq">'+step.q+'</div>';
+            h += '<div class="_qsub">'+step.sub+'</div>';
+            h += '<div class="_opts">';
+            for(var j=0;j<step.opts.length;j++){
+                var o = step.opts[j];
+                var sel = (_ans[_cur] === o.val) ? ' _sel' : '';
+                h += '<div class="_opt'+sel+'" data-v="'+o.val+'" onclick="_selOpt(this)">';
+                h += '<div class="_ic"><span>'+o.ic+'</span></div>';
+                h += o.txt+'</div>';
+            }
+            h += '</div>';
+            h += '<div class="_qnav">';
+            if(_cur > 0) h += '<button class="_bck" onclick="_prev()">← Back</button>';
+            h += '<button class="_nxt" id="_nbtn" onclick="_next()"'+(!_ans[_cur]?' disabled':'')+'>'+(_cur===_tot-1?'See Results →':'Next →')+'</button>';
+            h += '</div>';
+
+            bdy.innerHTML = h;
+        }
+
+        // Select option
+        window._selOpt = function(el){
+            var opts = el.parentElement.children;
+            for(var i=0;i<opts.length;i++) opts[i].classList.remove('_sel');
+            el.classList.add('_sel');
+            _ans[_cur] = el.getAttribute('data-v');
+            document.getElementById('_nbtn').disabled = false;
+        };
+
+        // Next step
+        window._next = function(){
+            if(!_ans[_cur]) return;
+            if(_cur < _tot-1){
+                _cur++;
+                _render();
+            } else {
+                _showResult();
+            }
+        };
+
+        // Previous step
+        window._prev = function(){
+            if(_cur > 0){
+                _cur--;
+                _render();
+            }
+        };
+
+        // Show final result with WhatsApp
+        function _showResult(){
+            var bdy = document.getElementById('_qbdy');
+            var bars = document.getElementById('_qpr').children;
+            for(var i=0;i<_tot;i++) bars[i].className = '_done';
+
+            var h = '<div class="_qfin">';
+            h += '<div class="_chk">✓</div>';
+            h += '<h3>Perfect Match Found! 🎯</h3>';
+            h += '<p>Aapki requirement ke liye best deal available hai.<br>WhatsApp pe abhi baat karein!</p>';
+            h += '<button class="_wabtn" onclick="_goWA()"><span style="font-size:22px">📱</span> WhatsApp pe Chat Karein</button>';
+            h += '</div>';
+
+            bdy.innerHTML = h;
+        }
+
+        // Go to WhatsApp with all answers
+        window._goWA = function(){
+            var m = "Hi! Mujhe Ad Account chahiye 👋\n\n";
+            m += "📋 *Meri Requirements:*\n";
+            m += "━━━━━━━━━━━━━━━\n";
+            m += "🎯 Ad Type: " + (_ans[0]||'-') + "\n";
+            m += "📱 Platform: " + (_ans[1]||'-') + "\n";
+            m += "🏢 Account Type: " + (_ans[2]||'-') + "\n";
+            m += "💰 Budget: " + (_ans[3]||'-') + "\n";
+            m += "📂 Niche: " + (_ans[4]||'-') + "\n";
+            m += "📦 Quantity: " + (_ans[5]||'-') + "\n";
+            m += "━━━━━━━━━━━━━━━\n\n";
+            m += "Please share pricing and availability. 🙏";
+
+            var url = "https://wa.me/918377950798?text=" + encodeURIComponent(m);
+            window.open(url, '_blank');
+            _close();
+        };
+
+        function _close(){
+            var ov = document.getElementById('_qov');
+            if(ov) ov.classList.remove('_av');
+            document.body.style.overflow = '';
+            sessionStorage.setItem('_qd','1');
+        }
+
+        function _show(){
+            var ov = document.getElementById('_qov');
+            if(ov){
+                ov.classList.add('_av');
+                document.body.style.overflow = 'hidden';
             }
         }
-    }, 1000);
 
-    // Close popup
-    function closePopup() {
-        var popup = document.getElementById('leadPopup');
-        popup.classList.remove('active');
-        document.body.style.overflow = '';
-        sessionStorage.setItem('popupClosed', 'true');
-    }
-
-    // Close on overlay click
-    document.getElementById('leadPopup').addEventListener('click', function(e) {
-        if (e.target === this) closePopup();
-    });
-
-    // Close on Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') closePopup();
-    });
-
-    // Handle popup form submission
-    function handlePopupSubmit(event) {
-        event.preventDefault();
-        var name = document.getElementById('popup-name').value.trim();
-        var phone = document.getElementById('popup-phone').value.trim();
-        var business = document.getElementById('popup-business').value.trim();
-        var budget = document.getElementById('popup-budget').value;
-        var need = document.getElementById('popup-need').value;
-
-        // Build WhatsApp message
-        var msg = "Hi Admiz Agency! 👋\n\n";
-        msg += "I'm interested in your services.\n\n";
-        msg += "📋 *Lead Details:*\n";
-        msg += "👤 Name: " + name + "\n";
-        msg += "📱 Phone: " + phone + "\n";
-        if (business) msg += "🏢 Business: " + business + "\n";
-        if (budget) msg += "💰 Budget: " + budget + "\n";
-        msg += "🎯 Requirement: " + need + "\n\n";
-        msg += "Please share more details about Meta Agency Ad Account.";
-
-        // Fire Meta Pixel Lead event
-        if (typeof fbq !== 'undefined') {
-            fbq('track', 'Lead', {
-                content_name: need,
-                content_category: 'Meta Agency Ad Account',
-                value: budget || 'not specified',
-                currency: 'INR'
-            });
+        // Init after human interaction detected (extra bot protection)
+        var _inited = false;
+        function _init(){
+            if(_inited) return;
+            if(sessionStorage.getItem('_qd')) return;
+            _inited = true;
+            _build();
+            setTimeout(_show, 300);
         }
 
-        // Redirect to WhatsApp
-        var waURL = "https://wa.me/918377950798?text=" + encodeURIComponent(msg);
-        
-        // Show success
-        var btn = document.querySelector('.popup-submit');
-        btn.innerHTML = '<i class="fas fa-check"></i> Redirecting to WhatsApp...';
-        btn.style.background = '#25D366';
-        
-        setTimeout(function() {
-            window.open(waURL, '_blank');
-            closePopup();
-            btn.innerHTML = 'Get Started on WhatsApp <i class="fab fa-whatsapp"></i>';
-            btn.style.background = '';
-            document.getElementById('popupForm').reset();
-        }, 800);
-    }
+        // Trigger: show after 1 second but only if real user
+        setTimeout(function(){
+            // Check for human signals
+            if(sessionStorage.getItem('_qd')) return;
+            _init();
+        }, 1000);
+
+        // Also trigger on first interaction as backup
+        ['mousemove','touchstart','scroll','keydown'].forEach(function(evt){
+            document.addEventListener(evt, function _h(){
+                document.removeEventListener(evt, _h);
+                if(!_inited && !sessionStorage.getItem('_qd')){
+                    setTimeout(_init, 500);
+                }
+            }, {once:true, passive:true});
+        });
+    })();
     </script>
 
     <script src="script.js"></script>
 </body>
 </html>
+
