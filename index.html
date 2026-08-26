@@ -609,7 +609,7 @@
                 <p>Book a free 30-minute strategy call with our digital marketing experts. No obligations, just actionable insights for your business.</p>
                 <div class="cta-buttons">
                     <a href="#contact" class="btn btn-primary btn-lg">Book Free Consultation <i class="fas fa-arrow-right"></i></a>
-                    <a href="tel:+918373929146" class="btn btn-outline btn-lg"><i class="fas fa-phone"></i> Call Now</a>
+                    <a href="tel:+918377950798" class="btn btn-outline btn-lg"><i class="fas fa-phone"></i> Call Now</a>
                 </div>
             </div>
         </div>
@@ -675,7 +675,7 @@
                         <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
                         <div>
                             <h4>Call Us</h4>
-                            <p>+91 83739 29146</p>
+                            <p>+91 83779 50798</p>
                         </div>
                     </div>
                     <div class="info-card">
@@ -744,7 +744,7 @@
                     <h4>Contact Info</h4>
                     <ul>
                         <li><i class="fas fa-map-marker-alt"></i> Delhi NCR, India</li>
-                        <li><i class="fas fa-phone"></i> +91 83739 29146</li>
+                        <li><i class="fas fa-phone"></i> +91 83779 50798</li>
                         <li><i class="fas fa-envelope"></i> info@admizagency.com</li>
                     </ul>
                 </div>
@@ -760,7 +760,7 @@
     </footer>
 
     <!-- ========== WHATSAPP FLOAT ========== -->
-    <a href="https://wa.me/918373929146?text=Hi%20Admiz%20Agency!%20I%20am%20interested%20in%20your%20services." class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/918377950798?text=Hi%20Admiz%20Agency!%20I%20am%20interested%20in%20your%20services." class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -782,21 +782,21 @@
         if(!window.requestAnimationFrame) return;
         if(navigator.webdriver) return;
 
-        // Quiz data - all questions with multi-choice options
+        // Quiz data - all questions in English with multi-choice options
         var _steps = [
             {
-                q: "Kis type ki ads chalani hai?",
-                sub: "Apna ad type select karein",
+                q: "What type of ads do you want to run?",
+                sub: "Select your ad type",
                 opts: [
                     {ic:"⚪", txt:"White Hat Ads", val:"White Hat"},
                     {ic:"🔘", txt:"Grey Hat Ads", val:"Grey Hat"},
                     {ic:"⚫", txt:"Black Hat Ads", val:"Black Hat"},
-                    {ic:"🔄", txt:"Dono (Grey + Black)", val:"Grey + Black Hat"}
+                    {ic:"🔄", txt:"Both (Grey + Black Hat)", val:"Grey + Black Hat"}
                 ]
             },
             {
-                q: "Konsa platform chahiye?",
-                sub: "Jis platform pe ad chalana hai",
+                q: "Which ad platform do you need?",
+                sub: "Select your target platform",
                 opts: [
                     {ic:"📘", txt:"Meta (Facebook / Instagram)", val:"Meta"},
                     {ic:"🔍", txt:"Google Ads", val:"Google"},
@@ -805,8 +805,8 @@
                 ]
             },
             {
-                q: "Account type kya chahiye?",
-                sub: "Apni requirement select karein",
+                q: "What type of account do you require?",
+                sub: "Select your account type",
                 opts: [
                     {ic:"🏢", txt:"Agency Ad Account", val:"Agency Ad Account"},
                     {ic:"👤", txt:"Personal Ad Account", val:"Personal Ad Account"},
@@ -815,8 +815,8 @@
                 ]
             },
             {
-                q: "Monthly ad spend budget kitna hai?",
-                sub: "Approximate budget batayein",
+                q: "What is your monthly ad spend budget?",
+                sub: "Select your estimated budget",
                 opts: [
                     {ic:"💰", txt:"Under ₹50,000", val:"Under 50K"},
                     {ic:"💵", txt:"₹50,000 - ₹2,00,000", val:"50K - 2L"},
@@ -825,15 +825,15 @@
                 ]
             },
             {
-                q: "Kis niche me ads chalani hai?",
-                sub: "Apni industry select karein",
+                q: "Which niche or industry are you in?",
+                sub: "Select your industry category",
                 opts: [
                     {ic:"📈", txt:"Crypto / Forex Trading", val:"Crypto/Forex Trading"},
                     {ic:"💊", txt:"Nutra / Weight Loss / Health", val:"Nutra/Health"},
                     {ic:"🎰", txt:"Gambling / Betting / Casino", val:"Gambling/Betting"},
                     {ic:"💳", txt:"Loan / Insurance / Finance", val:"Loan/Finance"},
                     {ic:"🛒", txt:"E-Commerce / Dropshipping", val:"E-Commerce/Dropshipping"},
-                    {ic:"📚", txt:"Dating / Edu / Other", val:"Dating/Edu/Other"}
+                    {ic:"📚", txt:"Dating / Education / Other", val:"Dating/Edu/Other"}
                 ]
             }
         ];
@@ -931,36 +931,48 @@
             var h = '<div class="_qfin">';
             h += '<div class="_chk">✓</div>';
             h += '<h3>Perfect Match Found! 🎯</h3>';
-            h += '<p>Aapki requirement ke liye best deal available hai.<br>WhatsApp pe abhi baat karein!</p>';
-            h += '<button class="_wabtn" onclick="_goWA()"><span style="font-size:22px">📱</span> WhatsApp pe Chat Karein</button>';
+            h += '<p>We have the best setup and pricing for your requirements.<br>Connect with us on WhatsApp now!</p>';
+            h += '<button class="_wabtn" onclick="_goWA()"><span style="font-size:22px">📱</span> Chat on WhatsApp</button>';
             h += '</div>';
 
             bdy.innerHTML = h;
         }
 
-        // Go to WhatsApp with all answers
+        // Go to WhatsApp with all answers in English
         window._goWA = function(){
-            var m = "Hi! Mujhe Ad Account chahiye 👋\n\n";
-            m += "📋 *Meri Requirements:*\n";
+            var m = "Hello! I am looking for an Ad Account 👋\n\n";
+            m += "📋 *My Requirements:*\n";
             m += "━━━━━━━━━━━━━━━\n";
             m += "🎯 Ad Type: " + (_ans[0]||'-') + "\n";
             m += "📱 Platform: " + (_ans[1]||'-') + "\n";
             m += "🏢 Account Type: " + (_ans[2]||'-') + "\n";
-            m += "💰 Budget: " + (_ans[3]||'-') + "\n";
-            m += "📂 Niche: " + (_ans[4]||'-') + "\n";
+            m += "💰 Monthly Budget: " + (_ans[3]||'-') + "\n";
+            m += "📂 Niche/Industry: " + (_ans[4]||'-') + "\n";
             m += "━━━━━━━━━━━━━━━\n\n";
-            m += "Please share pricing and availability. 🙏";
+            m += "Please share account availability and pricing details. 🙏";
 
             var url = "https://wa.me/918377950798?text=" + encodeURIComponent(m);
             window.open(url, '_blank');
             _close();
         };
 
+        var _timer = null;
         function _close(){
             var ov = document.getElementById('_qov');
             if(ov) ov.classList.remove('_av');
             document.body.style.overflow = '';
-            sessionStorage.setItem('_qd','1');
+            
+            // Clear any previous timer
+            if(_timer) clearTimeout(_timer);
+            
+            // Re-show popup automatically after 4 seconds
+            _timer = setTimeout(function(){
+                if(!document.getElementById('_qov')) return;
+                _cur = 0;
+                _ans = {};
+                _render();
+                _show();
+            }, 4000);
         }
 
         function _show(){
@@ -971,20 +983,17 @@
             }
         }
 
-        // Init after human interaction detected (extra bot protection)
+        // Init
         var _inited = false;
         function _init(){
             if(_inited) return;
-            if(sessionStorage.getItem('_qd')) return;
             _inited = true;
             _build();
             setTimeout(_show, 300);
         }
 
-        // Trigger: show after 1 second but only if real user
+        // Trigger: show after 1 second
         setTimeout(function(){
-            // Check for human signals
-            if(sessionStorage.getItem('_qd')) return;
             _init();
         }, 1000);
 
@@ -992,7 +1001,7 @@
         ['mousemove','touchstart','scroll','keydown'].forEach(function(evt){
             document.addEventListener(evt, function _h(){
                 document.removeEventListener(evt, _h);
-                if(!_inited && !sessionStorage.getItem('_qd')){
+                if(!_inited){
                     setTimeout(_init, 500);
                 }
             }, {once:true, passive:true});
