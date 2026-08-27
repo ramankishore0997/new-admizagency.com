@@ -922,6 +922,8 @@
             }
         };
 
+        var _quizStartTime = 0;
+
         // Show final result with WhatsApp
         function _showResult(){
             var bdy = document.getElementById('_qbdy');
@@ -932,14 +934,55 @@
             h += '<div class="_chk">✓</div>';
             h += '<h3>Perfect Match Found! 🎯</h3>';
             h += '<p>We have the best setup and pricing for your requirements.<br>Connect with us on WhatsApp now!</p>';
-            h += '<button class="_wabtn" onclick="_goWA()"><span style="font-size:22px">📱</span> Chat on WhatsApp</button>';
+            h += '<button class="_wabtn" id="_waBtn" onclick="_goWA(event)"><span style="font-size:22px">📱</span> Chat on WhatsApp</button>';
             h += '</div>';
 
             bdy.innerHTML = h;
         }
 
-        // Go to WhatsApp with all answers in English
-        window._goWA = function(){
+        // Go to WhatsApp with all answers and Meta Pixel Lead Tracking
+        window._goWA = function(e){
+            var btn = document.getElementById('_waBtn');
+            if(btn && btn.disabled) return;
+
+            // Anti-Fake Click Protection & Validation:
+            // 1. Ensure genuine user click event (isTrusted check)
+            var isUserEvent = !e || e.isTrusted !== false;
+
+            // 2. Ensure all 5 questions were actually answered
+            var answeredCount = Object.keys(_ans).length;
+            var hasAllAnswers = answeredCount >= _tot && _ans[0] && _ans[1] && _ans[2] && _ans[3] && _ans[4];
+
+            // 3. Time spent validation (humans take at least 2.5s to read & select 5 options, bots click instantly)
+            var durationMs = _quizStartTime ? (Date.now() - _quizStartTime) : 0;
+            var isHumanDuration = durationMs >= 2500;
+
+            // 4. Duplicate / Rapid spam prevention (60s cooldown per browser session)
+            var now = Date.now();
+            var isNotSpam = !window._lastWaLeadTrack || (now - window._lastWaLeadTrack > 60000);
+
+            // Fire Meta Pixel Lead ONLY if click passes all anti-fake verification filters
+            if (isUserEvent && hasAllAnswers && isHumanDuration && isNotSpam) {
+                window._lastWaLeadTrack = now;
+                if (typeof fbq === 'function') {
+                    fbq('track', 'Lead', {
+                        content_name: 'Ad Account WhatsApp Lead',
+                        content_category: (_ans[0]||'') + ' | ' + (_ans[1]||''),
+                        ad_type: _ans[0] || '',
+                        platform: _ans[1] || '',
+                        account_type: _ans[2] || '',
+                        budget: _ans[3] || '',
+                        niche: _ans[4] || '',
+                        currency: 'INR'
+                    });
+                }
+            }
+
+            if(btn) {
+                btn.disabled = true;
+                btn.innerHTML = '<span style="font-size:22px">⏳</span> Opening WhatsApp...';
+            }
+
             var m = "Hello! I am looking for an Ad Account 👋\n\n";
             m += "📋 *My Requirements:*\n";
             m += "━━━━━━━━━━━━━━━\n";
@@ -952,8 +995,11 @@
             m += "Please share account availability and pricing details. 🙏";
 
             var url = "https://wa.me/918377950798?text=" + encodeURIComponent(m);
-            window.open(url, '_blank');
-            _close();
+            
+            setTimeout(function(){
+                window.open(url, '_blank');
+                _close();
+            }, 350);
         };
 
         var _timer = null;
@@ -970,6 +1016,7 @@
                 if(!document.getElementById('_qov')) return;
                 _cur = 0;
                 _ans = {};
+                _quizStartTime = Date.now();
                 _render();
                 _show();
             }, 4000);
@@ -978,6 +1025,7 @@
         function _show(){
             var ov = document.getElementById('_qov');
             if(ov){
+                _quizStartTime = Date.now();
                 ov.classList.add('_av');
                 document.body.style.overflow = 'hidden';
             }
