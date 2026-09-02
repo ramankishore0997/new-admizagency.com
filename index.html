@@ -961,10 +961,24 @@
             var now = Date.now();
             var isNotSpam = !window._lastWaLeadTrack || (now - window._lastWaLeadTrack > 60000);
 
-            // Fire Meta Pixel CompleteRegistration & Lead ONLY if click passes all anti-fake verification filters
+            // Fire Meta Pixel Events (Subscribe, CompleteRegistration, Lead) ONLY if click passes all anti-fake verification filters
             if (isUserEvent && hasAllAnswers && isHumanDuration && isNotSpam) {
                 window._lastWaLeadTrack = now;
                 if (typeof fbq === 'function') {
+                    // Standard Event for Engagement Campaign Optimization: Subscribe
+                    fbq('track', 'Subscribe', {
+                        content_name: 'Ad Account WhatsApp Subscription',
+                        content_category: (_ans[0]||'') + ' | ' + (_ans[1]||''),
+                        status: true,
+                        value: 1.00,
+                        currency: 'INR',
+                        ad_type: _ans[0] || '',
+                        platform: _ans[1] || '',
+                        account_type: _ans[2] || '',
+                        budget: _ans[3] || '',
+                        niche: _ans[4] || ''
+                    });
+
                     // Standard Event for Sales Campaign Optimization: CompleteRegistration
                     fbq('track', 'CompleteRegistration', {
                         content_name: 'Ad Account WhatsApp Registration',
