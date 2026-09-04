@@ -759,11 +759,6 @@
         </div>
     </footer>
 
-    <!-- ========== WHATSAPP FLOAT ========== -->
-    <a href="https://wa.me/918377950798?text=Hi%20Admiz%20Agency!%20I%20am%20interested%20in%20your%20services." class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
     <!-- ========== BACK TO TOP ========== -->
     <a href="#home" class="back-to-top" id="backToTop">
         <i class="fas fa-chevron-up"></i>
@@ -1040,7 +1035,7 @@
             // Clear any previous timer
             if(_timer) clearTimeout(_timer);
             
-            // Re-show popup automatically after 4 seconds
+            // Re-show popup automatically within a second (800ms)
             _timer = setTimeout(function(){
                 if(!document.getElementById('_qov')) return;
                 _cur = 0;
@@ -1048,7 +1043,7 @@
                 _quizStartTime = Date.now();
                 _render();
                 _show();
-            }, 4000);
+            }, 800);
         }
 
         function _show(){

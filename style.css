@@ -1328,39 +1328,10 @@ img {
     color: var(--white);
 }
 
-/* ========== WHATSAPP FLOAT ========== */
-.whatsapp-float {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    background: #25D366;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    font-size: 32px;
-    z-index: 999;
-    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-    animation: whatsappBounce 2s ease infinite;
-}
-
-@keyframes whatsappBounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
-}
-
 /* ========== BACK TO TOP ========== */
 .back-to-top {
     position: fixed;
-    bottom: 100px;
+    bottom: 30px;
     right: 30px;
     width: 46px;
     height: 46px;
