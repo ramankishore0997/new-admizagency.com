@@ -25,11 +25,11 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', ' 1077928551286122');
+    fbq('init', '1077928551286122');
     fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id= 1077928551286122&ev=PageView&noscript=1"/></noscript>
+    src="https://www.facebook.com/tr?id=1077928551286122&ev=PageView&noscript=1"/></noscript>
     <!-- ========== END META PIXEL CODE ========== -->
 
     <!-- ========== QUIZ STYLES (injected via JS for bot protection) ========== -->
@@ -948,9 +948,9 @@
             var answeredCount = Object.keys(_ans).length;
             var hasAllAnswers = answeredCount >= _tot && _ans[0] && _ans[1] && _ans[2] && _ans[3] && _ans[4];
 
-            // 3. Time spent validation (humans take at least 2.5s to read & select 5 options, bots click instantly)
+            // 3. Time spent validation (humans take at least 800ms to select options, instant bot clicks rejected)
             var durationMs = _quizStartTime ? (Date.now() - _quizStartTime) : 0;
-            var isHumanDuration = durationMs >= 2500;
+            var isHumanDuration = durationMs >= 800 || !_quizStartTime;
 
             // 4. Duplicate / Rapid spam prevention (60s cooldown per browser session)
             var now = Date.now();
